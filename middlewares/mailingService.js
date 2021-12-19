@@ -13,7 +13,7 @@ function sendMail(name, email, subject, message){
         from: process.env.EMAIL,
         to: 'manavdoda7@gmail.com',
         subject: subject,
-        html: `Mail from: <a href"mailto:${email}">${name}</a> <br> ${message}`
+        html: `Mail from: <a href="mailto:${email}">${name}</a> <br> ${message}`
         };
 
         transporter.sendMail(mailOptions, function(error, info){

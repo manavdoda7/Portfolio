@@ -4,6 +4,7 @@ const sendMail = require('../middlewares/mailingService')
 
 router.post('/', async(req, res)=>{
     const {name, email, subject, message} = req.body
+    console.log('POST /sendmail request')
     try{
         const mail = await sendMail(name, email, subject, message);
         console.log(mail);
